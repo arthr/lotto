@@ -20,6 +20,7 @@ class CreatePedidosTable extends Migration
                 ->references('id')
                 ->on('users');
             $table->string('codigo');
+            $table->string('pagamento');
             $table->string('status');
             $table->decimal('valor');
             $table->integer('quantidade_tickets');
