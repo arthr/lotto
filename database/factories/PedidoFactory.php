@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class PedidoFactory extends Factory
@@ -14,6 +15,7 @@ class PedidoFactory extends Factory
     public function definition()
     {
         return [
+            'user_id' => User::factory(),
             'codigo' => $this->faker->unique()->randomNumber(7),
             'pagamento' => $this->faker->creditCardType(),
             'status' => $this->faker->regexify('cancelado|aprovado|aguardando|negado'),
