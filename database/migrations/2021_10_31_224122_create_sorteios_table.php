@@ -18,7 +18,7 @@ class CreateSorteiosTable extends Migration
             $table->string('titulo');
             $table->text('descricao')->nullable();
             $table->integer('quantidade_tickets')->default(0);
-            $table->decimal('preco_tickets')->default(0);
+            $table->decimal('preco_ticket')->default(0);
             $table->timestamps();
             $table->softDeletes();
         });

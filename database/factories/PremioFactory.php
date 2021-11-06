@@ -19,8 +19,9 @@ class PremioFactory extends Factory
     public function definition()
     {
         return [
-            'sorteio_id' => Sorteio::factory(),
-            'nome' => $this->faker->words(3),
+            'sorteio_id' => Sorteio::factory()
+                ->hasPremio(1),
+            'nome' => $this->faker->word(),
             'descricao' => $this->faker->text(200),
             'valor' => $this->faker->randomFloat(2, 500, 500000),
         ];

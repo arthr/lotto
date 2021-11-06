@@ -17,12 +17,11 @@ class TicketFactory extends Factory
     public function definition()
     {
         return [
-            'user_id' => User::factory(),
             'sorteio_id' => Sorteio::factory(),
             'pedido_id' => Pedido::factory()
-                ->state(function (array $attr) {
+                ->state(function (array $attr, Sorteio $sorteio) {
                     return [
-                        'user_id' => $attr['user_id']
+                        'user_id' => $sorteio->user_id
                     ];
                 }),
             'valor' => $this->faker->randomFloat(2, 1, 100),

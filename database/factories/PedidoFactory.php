@@ -18,7 +18,7 @@ class PedidoFactory extends Factory
             'user_id' => User::factory(),
             'codigo' => $this->faker->unique()->randomNumber(7),
             'pagamento' => $this->faker->creditCardType(),
-            'status' => $this->faker->regexify('cancelado|aprovado|aguardando|negado'),
+            'status' => $this->faker->randomElement(['cancelado', 'aprovado', 'aguardando', 'negado']),
             'valor' => $this->faker->randomFloat(2, 10, 500),
             'quantidade_tickets' => $this->faker->randomNumber(2)
         ];

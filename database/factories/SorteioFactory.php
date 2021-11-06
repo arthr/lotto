@@ -18,10 +18,10 @@ class SorteioFactory extends Factory
     public function definition()
     {
         return [
-            'titulo' => $this->faker->words(2),
+            'titulo' => $this->faker->word(),
             'descricao' => $this->faker->text(400),
             'quantidade_tickets' => $this->faker->randomNumber(3),
-            'preco_ticket' => $this->fake->randomFloat(2, 10, 100),
+            'preco_ticket' => $this->faker->randomFloat(2, 10, 100),
         ];
     }
 }
