@@ -18,6 +18,6 @@ class Premio extends Model
 
     public function premioImagem()
     {
-        return $this->hasMany(PremioImagem::class);
+        return $this->hasOne(PremioImagem::class);
     }
 }
