@@ -16,7 +16,7 @@ class Premio extends Model
         return $this->belongsTo(Sorteio::class);
     }
 
-    public function imagens()
+    public function premioImagem()
     {
         return $this->hasMany(PremioImagem::class);
     }
